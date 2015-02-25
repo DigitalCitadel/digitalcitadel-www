@@ -1,13 +1,18 @@
 {{ partial "header/header-secondary.html" . }}
 
-<main class="tags-list">
-    {{ range .Data.Pages }}
-        <li>
-            <h4>
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a> <small>15 January 2015</small>
-            </h4>
-        </li>
-    {{ end }}
+<main class="tags">
+    <div class="mod-post-list">
+        <h1>{{ .Title }}</h1>
+        <ul>
+            {{ range .Data.Pages }}
+                <li>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <span>&#8226;</span>
+                    <small>{{ .Date.Format "Jan 2, 2006" }}</small>
+                </li>
+            {{ end }}
+        </ul>
+    </div>
 </main>
 
 {{ partial "footer.html" . }}
