@@ -1,0 +1,6 @@
+baseurl = "http://digitalcitadel.com"
+languageCode = "en-us"
+title = "Digital Citadel"
+
+[taxonomies]
+    tag = "tags"

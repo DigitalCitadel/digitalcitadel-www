@@ -1,0 +1,32 @@
+.mod-post-list
+
+    h1
+        text-decoration: underline
+
+    ul
+        list-style: none
+        padding-left: 0px
+        font-size: $font-size-large
+        border-bottom: 1px
+        margin-bottom: 60px
+
+        li
+            margin-bottom: 20px
+            padding-bottom: 20px
+            border-bottom: $light-gray-two
+            border-bottom-style: dotted
+            border-bottom-width: 1px
+
+            a
+                font-weight: $font-weight-medium
+                text-decoration: none
+                transition($link-transition)
+                color: $dark-gray
+
+                &:hover
+                    transition($link-transition)
+                    color: $blue
+
+            small
+                color: $light-gray-three
+

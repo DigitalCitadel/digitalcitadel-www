@@ -1,0 +1,32 @@
+.mod-tags
+
+    span
+        font-weight: $font-weight-light
+        display: inline-block
+        color: $light-gray-three
+        font-size: $font-size-small
+        margin-right: 5px
+
+    ul
+        list-style: none
+        padding-left: 0px
+        display: inline-block
+
+        li
+            display: inline-block
+
+            a
+                font-size: $font-size-small
+                font-weight: $font-weight-medium
+                padding: 0.25em 0.5em
+                border-radius: 3px
+                text-decoration: none
+                transition($link-transition)
+                background: $light-gray
+                color: $blue
+
+                &:hover
+                    transition($link-transition)
+                    color: #FFF
+                    background: $blue
+

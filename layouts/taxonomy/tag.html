@@ -1,0 +1,14 @@
+{{ partial "header/header-secondary.html" . }}
+
+<main class="tags-list">
+    {{ range .Data.Pages }}
+        <li>
+            <h4>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a> <small>15 January 2015</small>
+            </h4>
+        </li>
+    {{ end }}
+</main>
+
+{{ partial "footer.html" . }}
+

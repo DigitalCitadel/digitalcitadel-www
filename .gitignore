@@ -1,0 +1,12 @@
+# Node
+node_modules
+
+# Vim
+*.swp
+
+# Mac
+.DS_Store
+
+# Hugo
+public
+

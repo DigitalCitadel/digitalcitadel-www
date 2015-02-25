@@ -1,0 +1,25 @@
+{{ partial "header/header-secondary.html" . }}
+
+<main class="post">
+    <h1 class="title">{{ .Title }}</h1>
+    <span class="meta">{{ .Date.Format "Jan 2, 2006" }} &#8226; Brandon Romano</span>
+
+
+
+    <div class="content">
+        {{ .Content }}
+    </div>
+
+    <div class="mod-tags">
+        <span>Tags:</span>
+        <ul>
+            {{ range .Params.tags }}
+                <li><a href="/tags/{{ . | urlize }}">{{ . }}</a> </li>
+            {{ end }}
+        </ul>
+    </div>
+
+</main>
+
+{{ partial "footer.html" . }}
+

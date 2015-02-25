@@ -1,0 +1,88 @@
+.sticky-wrapper
+    height: 100%
+    float: left
+
+    nav
+        height: 100%
+        width: $sticky-nav-width
+        overflow-y: scroll
+        background-color: $light-gray
+
+        // == Logo ==
+
+        .logo-container
+            background-color: $blue
+            width: 100%
+            cursor: pointer
+            overflow: hidden
+
+            transition($logo-transition)
+            padding-top: 0px
+            padding-bottom: 0px
+            height: 0px
+
+            img
+                height: $logo-height
+                margin-left: auto
+                margin-right: auto
+                display: block
+
+        // == Stuck Nav ==
+
+        &.stuck, &.perma-stuck
+            position: fixed
+            top: 0
+
+            .logo-container
+                transition($logo-transition)
+                padding-top: $logo-padding
+                padding-bottom: $logo-padding
+                height: $logo-height
+
+
+        // == Nav Elements ==
+
+        ul.links
+            margin: 0px
+            padding: $nav-tb-padding $nav-lr-padding
+            list-style: none
+
+            li
+                margin-bottom: $nav-li-spacing
+
+                a
+                    font-weight: $font-weight-medium
+                    font-size: $font-size-medium
+                    text-decoration: none
+
+                    transition($link-transition)
+                    color: $medium-gray
+
+                    &:hover
+                        transition($link-transition)
+                        color: $blue
+
+                &.header
+                    font-size: $font-size-small
+                    font-weight: $font-weight-medium
+                    color: $medium-gray
+                    text-decoration: underline
+
+        // == Nav Social ==
+
+        ul.social
+            padding: $nav-tb-padding $nav-lr-padding
+            margin: 0px
+            list-style: none
+
+            i
+                font-size: $font-size-large
+                cursor: pointer
+
+                transition($link-transition)
+                color: $medium-gray
+
+                &:hover
+                    transition($link-transition)
+                    color: $blue
+
