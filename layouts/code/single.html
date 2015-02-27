@@ -1,0 +1,17 @@
+{{ partial "header/header-secondary.html" . }}
+
+<main class="code">
+
+    <h1 class="title">{{ .Title }}</h1>
+    <a href="{{ .Params.source_url }}" class="source-link">
+        <i class="fa fa-github-square"></i>
+    </a>
+
+    <div class="content">
+        {{ .Content }}
+    </div>
+
+</main>
+
+{{ partial "footer.html" . }}
+

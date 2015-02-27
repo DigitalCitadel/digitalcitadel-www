@@ -1,7 +1,7 @@
 {{ partial "header/header-primary.html" . }}
 
 <main>
-    <div class="mod-post-list">
+    <div class="mod-titled-list">
         <h1>Blog Posts</h1>
         <ul>
             {{ range first 10 (where .Data.Pages "Section" "post") }}

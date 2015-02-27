@@ -9,9 +9,9 @@
     <br><br>
 
     <li class="header">Code</li>
-    <li><a href="">Originator</a></li>
-    <li><a href="">Cream</a></li>
-    <li><a href="">Ash</a></li>
+    {{ range first 10 (where .Site.Pages "Section" "code") }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
 </ul>
 
 <ul class="social">
