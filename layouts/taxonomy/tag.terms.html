@@ -1,20 +1,20 @@
 {{ partial "header/header-secondary.html" . }}
 
-<main class="tags">
+{{ $data := .Data }}
+
+<main class="terms">
     <div class="mod-post-list">
         <h1>{{ .Title }}</h1>
         <ul>
-            {{ range .Data.Pages }}
+            {{ range $key, $value := .Data.Terms }}
                 <li>
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <a href="/{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a>
                     <span>&#8226;</span>
-                    <small>{{ .Date.Format "Jan 2, 2006" }}</small>
+                    <small>{{ len $value }}</small>
                 </li>
             {{ end }}
         </ul>
     </div>
-
-    <a href="/tags" class="all-tags">&laquo; View all tags</a>
 </main>
 
 {{ partial "footer.html" . }}
