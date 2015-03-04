@@ -1,0 +1,19 @@
+{{ partial "header/header-secondary.html" . }}
+
+<main class="terms">
+    <div class="mod-titled-list">
+        <h1>{{ .Title }}</h1>
+        <ul>
+            {{ range .Data.Pages }}
+                <li>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    <span>&#8226;</span>
+                    <small>{{ .Date.Format "Jan 2, 2006" }}</small>
+                </li>
+          {{ end }}
+        </ul>
+    </div>
+</main>
+
+{{ partial "footer.html" . }}
+

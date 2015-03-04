@@ -8,8 +8,8 @@
     <li><a href="/about">About</a></li>
     <br><br>
 
-    <li class="header">Code</li>
-    {{ range first 10 (where .Site.Pages "Section" "code") }}
+    <li class="header">Projects</li>
+    {{ range first 10 (where .Site.Pages "Section" "project") }}
         <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{ end }}
 </ul>
