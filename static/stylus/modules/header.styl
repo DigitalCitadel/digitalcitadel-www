@@ -2,6 +2,9 @@ header
     background-color: $blue
     padding: $header-padding 0
 
+    &.secondary
+        display: none
+
     img
         height: $header-image-height
         margin: 0 auto
@@ -29,6 +32,7 @@ header
             font-weight: $font-weight-medium
 
             &:not(:last-child):after
+                padding: 0px $header-mobile-nav-padding
                 content: " •"
 
 @media screen and (max-width: $mobile-breakpoint)
@@ -36,17 +40,19 @@ header
     header
         padding: $logo-padding 0
 
+        &.secondary
+            display: block
+
         h2
             display: none
 
         img
             height: $logo-height
             display: inline-block
-            margin-left: 20px
+            margin-left: $header-mobile-padding
             margin-right: 0px
 
         nav
             display: inline-block
             line-height: $logo-height
-            margin-right: 20px
-
+            margin-right: $header-mobile-padding
