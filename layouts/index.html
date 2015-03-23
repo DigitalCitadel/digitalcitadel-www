@@ -2,7 +2,7 @@
 
 <main>
     <div class="mod-titled-list">
-        <h1>Blog Posts</h1>
+        <h1>Recent Posts</h1>
         <ul>
             {{ range first 10 (where .Data.Pages "Section" "post") }}
                 <li>
@@ -12,6 +12,8 @@
                 </li>
             {{ end }}
         </ul>
+
+        <a href="/post" class="view-more">View all posts &raquo;</a>
     </div>
 </main>
 
