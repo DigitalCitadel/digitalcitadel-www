@@ -10,14 +10,14 @@ gulp.task('installDeps', shell.task('npm install'));
 
 // Compiles Stylus
 gulp.task('stylus', function() {
-  return gulp.src('./static/stylus/index.styl').pipe(stylus({
+  return gulp.src('./pre-compiled/stylus/index.styl').pipe(stylus({
     use: [jeet()]
   })).pipe(gulp.dest('./static/css/'));
 });
 
 // Starts the watcher
 gulp.task('watch', function() {
-    gulp.watch("./static/stylus/**/*.styl", ['stylus']);
+    gulp.watch("./pre-compiled/stylus/**/*.styl", ['stylus']);
 });
 
 // Manual Compile
