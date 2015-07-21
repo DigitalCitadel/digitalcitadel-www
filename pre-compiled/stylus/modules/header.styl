@@ -8,7 +8,12 @@ header
     img
         height: $header-image-height
         margin: 0 auto
-        display: block
+
+        &#logo-small
+            display: block
+
+        &#logo-square
+            display: none
 
     h2
         margin: 0 auto
@@ -16,7 +21,7 @@ header
         font-weight: $font-weight-medium
         font-size: $font-size-small
         margin-top: $font-size-small
-        color: $dark-gray
+        color: $white
 
     nav
         display: none
@@ -52,7 +57,16 @@ header
             margin-left: $header-mobile-padding
             margin-right: 0px
 
+            &#logo-small
+                display: none
+
+            &#logo-square
+                display: block
+
         nav
             display: inline-block
             line-height: $logo-height
             margin-right: $header-mobile-padding
+
+            a
+                color: $white
