@@ -3,6 +3,7 @@ author = "Brandon Romano"
 date = "2015-07-20T21:39:24-04:00"
 tags = ["bash", "unix"]
 title = "Killing a Process by Partial Name"
+description = "An introduction to the superkill command"
 +++
 
 As an Android Developer, I've had my share of having to manually kill processes.  Before Android Studio became the standard, I couldn't tell you the amount of times per day I had to kill Eclipse.  Nowadays my kill command appears in my history a lot less, but I still find myself having to kill a few processes every now and again.

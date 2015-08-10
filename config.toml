@@ -2,5 +2,8 @@ baseurl = "http://digitalcitadel.com"
 languageCode = "en-us"
 title = "Digital Citadel"
 
+[params]
+    description = "Mostly solutions, but also other things"
+
 [taxonomies]
     tag = "tags"
